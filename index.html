@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enjoy With Me</title>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 5px;
+    border: 4px solid rgb(15, 15, 15);
+    border-radius: 15px;
+    width: 20rem;
+    height: 41rem;
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+   
+}
+
+header{
+
+
+height: 3.5rem;
+border-radius: 10px 10px 0px 0px;
+
+display: flex;
+align-items: center;
+flex-direction: row ;
+justify-content: space-around;
+background-color: rgb(83, 86, 255);
+color: white;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+header h3{
+  
+    font-family: sans-serif;
+}
+header h3 p{
+    font-size: 12px;
+    margin-bottom: -8px;
+    margin-top: 3px;
+}
+
+.slide{
+  
+    height: 3rem;
+    background-color:rgb(55, 140, 231);
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.slide a{
+    color: white;
+    text-decoration: none;
+}
+
+.slide i{
+    margin: 10px;
+}
+
+.imgsec{
+    height: 15rem;
+   
+}
+.imgsec img{
+    width: 100%;
+    height: 15rem;
+}
+.imgsec2{
+    height: 6rem;
+    margin: 5px;
+}
+.imgsec2 img{
+    height: 6rem;
+    width: 100%;
+    
+}
+
+.box{
+
+    margin-top: 5px;
+    height: 19rem;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+
+
+}
+
+.box .item{
+   
+    width: 8rem;
+    height: 12rem;
+    margin: 6px;
+}
+
+.head{
+    margin-top: 10px;
+    margin-left:5px ;
+    font-family: sans-serif;
+    color: gray;
+}
+
+.box .item img{
+    width: 8rem;
+    height: 12rem;
+}
+
+.box .item a .rate{
+    height: 1.5rem;
+    width: 5rem;
+    background-color: rgb(172, 166, 166);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.box .item a .rate i{
+    font-size: 10px;
+    color: gold;
+}
+
+.box .item a .rate p{
+    font-size: 10px;
+    color: white;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+.box .item a p{
+
+    font-size: 15px;
+    color: black;
+
+}
+
+.event{
+    margin-top: 5px;
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.event a img{
+    border-radius: 10px;
+    height: 5rem;
+    width: 8rem;
+}
+
+
+.event2{
+    margin-top: 5px;
+    height: 8rem;
+    display: flex;
+    flex-direction: row;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+
+}
+.event2 a img{
+    border-radius: 10px;
+    margin: 7px;
+    height: 5rem;
+    width: 8rem;
+}
+
+
+.sec3{
+    height:4rem;
+}
+
+.sec3 img{ 
+    height:4rem;
+    width: 100%;
+}
+
+
+.big{
+
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin-top: 5px;
+    height: 20rem;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+
+}
+
+.box2{
+
+    position: relative;
+
+    flex-direction: column;
+    display: flex;
+    height: 18rem;
+    background-color: rgb(83, 86, 255);
+}
+
+.box2 .content{
+   
+    width: 18.8rem;
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.box2 .content p{
+    text-align: left;
+
+    color: white;
+    font-family:sans-serif ;
+
+}
+.box2 .one{
+ 
+    position: relative;
+}
+
+.box2 .content img{
+    margin: 5px;
+    height: 12rem;
+    width: 8rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+} 
+
+.box2 .one .button{
+ 
+    color: white;
+    background-color: rgb(241, 74, 74);
+    border: none;
+    font-weight: bolder;
+    margin-left: 10%;
+    height: 2.5rem;
+    width: 16rem;
+    margin-top: 20%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.box2 .one .rate{
+    height: 1.5rem;
+    width: 5rem;
+    background-color: rgb(172, 166, 166);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -20%;
+    margin-left: 50%;
+}
+.box2 .one .rate i{
+    font-size: 10px;
+    color: gold;
+}
+
+.box2 .one .rate p{
+    font-size: 10px;
+    color: white;
+}
+
+.box3{
+    background-color: rgb(160, 73, 241);
+}
+
+.but{
+    color: white;
+    border: none;
+    font-weight: bolder;
+    margin-left: 10%;
+    height: 2.5rem;
+    width: 16rem;
+    margin-top: 20%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    background-color: rgb(76, 43, 226);
+}
+
+
+.box4{
+    background-color: rgb(144, 123, 165);
+}
+
+.box4 .but{
+    color: white;
+    border: none;
+    font-weight: bolder;
+    margin-left: 10%;
+    height: 2.5rem;
+    width: 16rem;
+    margin-top: 20%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    background-color: rgb(162, 151, 211);
+}
+
+
+.ultimate{
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    margin-bottom: 10px;
+    
+    
+    
+}
+.ultimate img{
+    height: 5rem;
+    width: 8rem;
+    border-radius: 10px;
+}
+
+
+.attend{
+
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    display: flex;
+    height: 18rem;   
+    background-color: rgba(187, 187, 192, 0.685);
+}
+
+.attend img{
+    margin-top: 15px;
+    height: 10rem;
+    width: 6rem;
+    margin-left: 15px;
+}
+
+</style>
+
+
+
+</head>
+<body>
+    
+<div class="container">
+<header>
+<h3> <u>Enjoy With Popcorns!</u><p>Agra ></p> </h3>
+
+<a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+<a href="#"><i class="fa-regular fa-bell"></i></a>
+<a href="#"><i class="fa-solid fa-qrcode"></i></a>
+</header>
+
+<div class="slide">
+  <a href="#"><i class="fa-solid fa-film"></i></a>  
+  <a href="#"><i class="fa-solid fa-calendar-days"></i></a>  
+  <a href="#"><i class="fa-solid fa-person-running"></i></a>  
+  <a href="#"><i class="fa-brands fa-playstation"></i></a>   
+  <a href="#"><i class="fa-solid fa-person-skating"></i></a>  
+  <a href="#"><i class="fa-solid fa-ticket"></i></a> 
+  <a href="#"><i class="fa-solid fa-eye"></i></a>  
+</div>
+
+
+<div class="imgsec">
+    <img src="https://media.istockphoto.com/id/640312914/vector/cinema-and-movie-time.jpg?s=1024x1024&w=is&k=20&c=urlWdPvH-Vxv040xV3-kyw4_vH6WP8yGEn8XtrVns_M=" alt="">
+</div>
+
+<div class="imgsec2">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ8V04lSo9wROZ8lZNqek2BoU-lUqqGDWWqeDzZgxxdQ&s" alt="">
+</div>
+
+
+
+<div class="head"><h3>Lattest Movies</h3></div>
+<div class="box">
+    
+    
+
+    <div class="item">
+        <a href="#">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXm4MEQhlq-wMhXdPH_iluL9glAKSR0en0_cuo5PF4Cg&s" alt="">
+                <div class="rate">
+                    <i class="fa-solid fa-star"> 4.2</i>
+                    <p>54k votes</p>
+                </div>
+                <p>Latest Hindi Thriller Movies 2024 |  Fighter </p>
+        </a>  
+    </div>
+
+    <div class="item">
+        <a href="#">
+                <img src="https://static0.cbrimages.com/wordpress/wp-content/uploads/2023/12/furiosa-a-mad-max-saga-new-film-poster-2.jpg" alt="">
+                <div class="rate">
+                    <i class="fa-solid fa-star"> 8.2</i>
+                    <p>92k votes</p>
+                </div>
+                <p>Most Anticipated Sci-Fi Movies Releasing in 2024</p>
+        </a>  
+    </div>
+
+    <div class="item">
+        <a href="#">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1FkUgWYgdRWks2xKhLFsfewo5cfdaPkqmqzvlQzx5ow&s" alt="">
+                <div class="rate">
+                    <i class="fa-solid fa-star"> 4.8</i>
+                    <p>84k votes</p>
+                </div>
+                <p>2024 Action Movies | Role play</p>
+        </a>  
+    </div>
+
+    <div class="item">
+        <a href="#">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgyGpZ16rLvvhpmlqA8fR8v4rMBRTFihPq4-f7smo6lA&s" alt="">
+                <div class="rate">
+                    <i class="fa-solid fa-star"> 4.6</i>
+                    <p>85k votes</p>
+                </div>
+                <p>Daredevil (2024 MCU film) | Fanon Wiki | Fandom</p>
+        </a>  
+    </div>
+    
+
+    <div class="item">
+        <a href="#">
+                <img src="https://resizing.flixster.com/j0-KuBjioJWd2FOkFRibLbofbWY=/206x305/v2/https://resizing.flixster.com/8yCWg9MRcT7LnnuHtqe1ACAyDHQ=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzZmZDY4MmFmLTE2ZGYtNDY1NS1iZmY5LWZmYjVjZjBkNTk3OC5qcGc=" alt="">
+                <div class="rate">
+                    <i class="fa-solid fa-star"> 9.6</i>
+                    <p>82k votes</p>
+                </div>
+                <p>Inside Out 2 | Rotten Tomatoes</p>
+        </a>  
+    </div>
+
+
+    <div class="item">
+        <a href="#">
+                <img src="https://mousetrapnews.com/wp-content/uploads/2024/01/Chemo-Disney-Movie-1024x1024.png" alt="">
+                <div class="rate">
+                    <i class="fa-solid fa-star"> 7.6</i>
+                    <p>89k votes</p>
+                </div>
+                <p>Most Unhinged Disney/Pixar Films Coming Out in 2024</p>
+        </a>  
+    </div>
+
+</div>
+
+
+
+<div class="head"><h3>The Best Eventes</h3></div>
+
+
+
+<div class="event">
+   <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQckiF_cxXkzd1pur_z71MCZQ4MvHtXQOAodhm41XDyNA&s" alt=""></a> 
+   <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwTbavCw7JpaBD1EF8Jt_7NL333ZKjlqG_b1UNbTFzsq0iSGZe4RqNEAOQS8JEXWr8EmA&usqp=CAU" alt=""></a> 
+</div>
+
+
+<div class="head"><h3>Eventes BY Category</h3></div>
+
+<div class="event2">
+    <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPwPRaXVodUffWypcdLPvPmwRwFPRKI2nhNCAwz5Po3Q&s" alt=""></a>
+    <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1j0Ikkx2qeYq61RaX5vfzD1B1R3R0bnYTpl_OIMBOuA&s" alt=""></a> 
+    <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXnWyTGnp52axzmSIw23ZM544zPyLKbCFyFznQdsyn_eOnwhZRlpC5cVXp4KPmSaXjnlI&usqp=CAU" alt=""></a>
+    <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7IyTWr-6bUD6Bo7Znq50-wQ1_pKKLPqsW6DgsyQ5Haw&s" alt=""></a>
+    <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRy8zWC2yNyFMRW-YDqDLQJCv_ayH9qSn6jl7-GuwOfw&s" alt=""></a>
+</div>
+
+
+<div class="sec3">
+    <a href="#"><img src="https://img.freepik.com/free-vector/online-cinema-banner-with-open-clapper-board-film-strip_1419-2242.jpg" alt=""></a>
+</div>
+
+
+
+<div class="big">
+
+    <div class="box2">
+        <div class="content">
+    
+            <img src="https://cdn.marvel.com/content/1x/antmanandthewaspquantumania_lob_crd_03.jpg" alt="">
+            <p>Marvel Movies | Marvel Cinematic Universe (MCU) Antman buy now</p>
+        </div>
+        <div class="one">
+            <div class="rate">
+                <i class="fa-solid fa-star"> 7.6</i>
+                <p>89k votes</p>
+            </div>
+            <button type="submit" class="button">Buy On Rent</button>
+        </div>
+      
+    
+    </div>
+
+
+    <div class="box2 box3">
+        <div class="content">
+    
+            <img src="https://st1.bollywoodlife.com/wp-content/uploads/2024/01/1-38.png?impolicy=Medium_Widthonly&w=400&h=711" alt="">
+            <p>Devara to Pushpa 2: Most awaited new movie 
+                <br> Buy now and get 20% Discount 
+            </p>
+           
+        </div>
+        <div class="one">
+            <div class="rate">
+                <i class="fa-solid fa-star"> 8.4</i>
+                <p>109k votes</p>
+            </div>
+            <button type="submit" class="but">Buy On Rent</button>
+        </div>
+      
+    
+    </div>
+
+
+    <div class="box2 box3 box4">
+        <div class="content">
+    
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMDv_vZ3QVApqmbW7C2amQcifQjEBaUfxQuPIO9kGtQ&s" alt="">
+            <p>No New Friends (2024) - IMDb
+                <br> Buy now and get 20% Discount 
+            </p>
+           
+        </div>
+        <div class="one">
+            <div class="rate">
+                <i class="fa-solid fa-star">9.6</i>
+                <p>100k votes</p>
+            </div>
+            <button type="submit" class="but">Buy On Rent</button>
+        </div>
+      
+    
+    </div>
+
+
+    
+    
+</div>
+
+
+<div class="head"><h3>The Ultimate Event List</h3></div>
+
+<div class="ultimate">
+   <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3JoFoJunzTlskB37S06coj4yl8Ic09N0fbg&s" alt=""></a> 
+   <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWtHLPjX-JJM07u-UG61ByiCidZxeBptbruNLtiYjHfg&s" alt=""></a> 
+   <a href="#"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJzUII2-2B1vi2KhI-oJeK21212R0RoLKSFJDdxRCXxg&s" alt=""></a>
+   <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6EjMMQ5cxw0OQwqbyeS9WBef-WdLV0VC6hx4Au6QNJA&s" alt=""></a> 
+</div>
+
+
+<div class="head"><h3>Attend Live Events </h3></div>
+
+<div class="box">
+
+    <div class="item">
+        <a href="#">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC/et00353198-nvxjcdmtwz-portrait.jpg" alt="">
+                
+                <p>Top Upcoming Events in Agra | Best Live Events in Agra -</p>
+        </a>  
+    </div> 
+
+    <div class="item">
+        <a href="#">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQMTsL5swjuhNI1XEXzw5pW7gxWGbrhhzC87q9T7UH-4CgDDzsoRJ4GSHTRqzhsfJLbv4&usqp=CAU" alt="">
+                
+                <p>Top Upcoming Events in Bengaluru | Best Live Events in </p>
+        </a>  
+    </div> 
+
+    <div class="item">
+        <a href="#">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMK9S6XJr_AeJDVUW2pePViCZlJjg98dpI0cLeKHk9Tgps8XhVTpyLrZ0uavTBAxVtrkg&usqp=CAU" alt="">
+               
+                <p>Best of Standup - Standup comedy show comedy-shows</p>
+        </a>  
+    </div> 
+
+
+    <div class="item">
+        <a href="#">
+                <img src="https://cdn-az.allevents.in/events5/banners/066ae46ef3da171b808dc675f8bfe40964667409a3468d87aa8f6ffba4795a2f-rimg-w1200-h1698-dc050101-gmir.jpg?v=1712658908" alt="">
+               
+                <p>Matsqui Events | List Of All Upcoming Matsqui Events I</p>
+        </a>  
+    </div> 
+
+
+    <div class="item">
+        <a href="#">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS89ktMltU6wcgR8Q2d3MNr-AMeAZOD9_y2Urc9Nw7ARaq-gf_wQ8evdHNhbNKZ4Lb7MMs&usqp=CAU" alt="">
+              
+                <p>Jon Pardi (Concert), Abbotsford Centre | AllEvents.in</p>
+        </a>  
+    </div> 
+
+
+    <div class="item">
+        <a href="#">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC/et00383790-vekztdhfhp-portrait.jpg" alt="">
+               
+                <p>Top Upcoming Events in Pune | Best Live Events in Pune</p>
+        </a>  
+    </div> 
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
